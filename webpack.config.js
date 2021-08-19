@@ -1,8 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 
 const devServerHost = 'localhost',
       devServerPort = 4000;
+
+const analyzerHost = 'localhost',
+      analyzerPort = 5000;
 
 module.exports = {
     mode: 'development',
@@ -50,6 +56,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
+        new CleanWebpackPlugin({
+            verbose: true
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.resolve(__dirname, 'public', 'template', 'index.html'),
@@ -62,6 +72,13 @@ module.exports = {
                 useShortDoctype: true,
                 html5: true
             }
+        }),
+        new WebpackBundleAnalyzer({
+            analyzerHost: analyzerHost,
+            analyzerPort: analyzerPort,
+            analyzerMode: 'static',
+            logLevel: 'error',
+            openAnalyzer: true
         })
     ]
 }
