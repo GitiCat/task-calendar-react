@@ -1,0 +1,22 @@
+.calendar-day {
+    height: 31px;
+    width: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+
+    .day-number {
+        color: #cecece;
+    }
+
+    &.in-month > .day-number { color: #1f1f1f; }
+
+    &.current {
+        background: #f00;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

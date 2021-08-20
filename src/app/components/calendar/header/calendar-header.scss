@@ -1,0 +1,18 @@
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 0px;
+    padding: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+
+    & > .day-name {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 8px;
+        color: #cecece
+    }
+}

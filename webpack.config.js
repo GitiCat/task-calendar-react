@@ -78,7 +78,7 @@ module.exports = {
             analyzerPort: analyzerPort,
             analyzerMode: 'static',
             logLevel: 'error',
-            openAnalyzer: true
+            openAnalyzer: false
         })
     ]
 }

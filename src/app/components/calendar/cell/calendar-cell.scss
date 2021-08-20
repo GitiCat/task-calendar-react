@@ -1,0 +1,17 @@
+.calendar-cell {
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: #abc7ff;
+    }
+
+    &.weekday {
+        background-color: #f5f5f5;
+
+        &:hover {
+            background-color: #e4edff;
+        }
+    }
+}
