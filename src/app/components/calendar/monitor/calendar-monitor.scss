@@ -1,0 +1,21 @@
+.calendar-monitor {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 42px;
+    padding-top: 14px;
+    margin: 0 0 14px;
+
+    .current {
+        & > span {
+            color: #1f1f1f;
+            font-weight: bold;
+            font-size: 32px;
+
+            &:first-child {
+                margin-right: 8px;
+            }
+        }
+    }
+}
