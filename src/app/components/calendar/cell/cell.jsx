@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import CalendarRowComponent from '../row/row';
@@ -10,9 +11,10 @@ const CalendarCellComponent = ({ day, isWeekday }) => {
     })
     
     return (
-        <div className={cellClasses}>
+        <Link className={cellClasses}
+            to={`/selected/${day.unix()}`}>
             <CalendarRowComponent day={day}/>
-        </div>
+        </Link>
     )
 }
 

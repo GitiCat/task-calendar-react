@@ -9,7 +9,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .root {
@@ -22,4 +22,39 @@ body {
     background-color: #efefef;
 }
 
-@import '../../src/app/components/calendar/calendar.scss'
+.icon-button {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #03a9f4;
+    border: none;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 23%);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 32px;
+    letter-spacing: 0.8px;
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+
+    & > i {
+        color: #fff;
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    & > span {
+        color: #fff;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        background-color: #23b9fc;
+        box-shadow: 0 4px 10px 0 rgb(0 0 0 / 23%);
+    }
+}
+
+@import "../../src/app/components/calendar/calendar.scss";
+@import "../../src/app/components/selected-day/selected-day.scss";

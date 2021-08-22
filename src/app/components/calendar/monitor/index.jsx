@@ -11,9 +11,9 @@ const CalendarMonitorComponent = ({ today, prevHandler, todayHandler, nextHandle
                 <span>{UpperCaseFirstChar(today.format('MMMM'))}</span>
             </div>
             <div className="controls">
-                <button type='button'>&lt;</button>
-                <button type='button'>Today</button>
-                <button type='button'>&gt;</button>
+                <button onClick={prevHandler}><i className="fa fa-angle-left" aria-hidden="true"></i></button>
+                <button onClick={todayHandler}>Текущий</button>
+                <button onClick={nextHandler}><i className="fa fa-angle-right" aria-hidden="true"></i></button>
             </div>
         </div>
     )
